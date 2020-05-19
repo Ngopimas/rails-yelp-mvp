@@ -12,6 +12,20 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <%= link_to restaurants_path, class: "navbar-brand" do %>
+        <%= image_tag "https://banner2.cleanpng.com/20180803/rio/kisspng-logo-cmo-axis-marketing-outsourcing-services-pvt-l-leading-marketing-company-in-india-l-marketing-out-5b6517c66fac97.8533440415333518784574.jpg" %>
+      <% end %>
+
+      <%= link_to 'Add a new restaurant', new_restaurant_path, class: "btn btn-primary" %>
+    </nav>
+
+    <div class="container my-3">
+
+      <%= yield %>
+
+    </div>
+
   </body>
 </html>

@@ -5,13 +5,13 @@ Review.destroy_all
 
 puts 'Creating restaurants...'
 
-category = ['chinese', 'italian', 'japanese', 'french', 'belgian']
+category = ['Chinese', 'Italian', 'Japanese', 'French', 'Belgian']
 rue = ['rue', 'avenue', 'square', 'impasse de', 'boulevard' ]
 
 10.times do
   Restaurant.create!(
     name: Faker::Restaurant.name,
-    address: "#{rand(1..60)}, #{rue.sample} #{Faker::FunnyName.name}, Paris",
+    address: "#{rand(1..60)} #{rue.sample} #{Faker::FunnyName.name}, Paris",
     phone_number: "01#{Faker::Company.czech_organisation_number}",
     category: category.sample
   )

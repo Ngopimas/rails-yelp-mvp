@@ -1,0 +1,15 @@
+<h1><%= @restaurant.name  %></h1>
+<h3><%= @restaurant.category %> food</h3>
+<p>📍<%= @restaurant.address %></p>
+<p>📞 <%= @restaurant.phone_number %></p>
+
+<% if @restaurant.reviews.any? %>
+  <%  @restaurant.reviews.each do |review| %>
+    <article class="my-3">
+      <small><%= review.rating %>/5 ⭐</small>
+      <p><%= review.content %></p>
+    </article>
+  <% end %>
+<% else %>
+  <p>This restaurant has no review yet.</p>
+<% end %>
