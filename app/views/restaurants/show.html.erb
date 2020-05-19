@@ -3,8 +3,10 @@
 <p>📍<%= @restaurant.address %></p>
 <p>📞 <%= @restaurant.phone_number %></p>
 
+<%= link_to 'Add a review', new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+
 <% if @restaurant.reviews.any? %>
-  <%  @restaurant.reviews.each do |review| %>
+  <%  @restaurant.reviews.reverse.each do |review| %>
     <article class="my-3">
       <small><%= review.rating %>/5 ⭐</small>
       <p><%= review.content %></p>

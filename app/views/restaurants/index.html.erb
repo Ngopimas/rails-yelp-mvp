@@ -1,7 +1,7 @@
-<h1>Rails Yelp</h1>
+<h1>Basic Rails Yelp</h1>
 <p>This is the ultimate list of the best restaurants in town</p>
 
-<% @restaurants.each do |restaurant|  %>
+<% @restaurants.shuffle.each do |restaurant|  %>
   <article class="my-3">
     <h3>
       <%= link_to restaurant.name, restaurant_path(restaurant) %> - <small><%= restaurant.category %></small>

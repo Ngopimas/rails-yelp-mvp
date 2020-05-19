@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    @collection = Restaurant::CATEGORY
   end
 
   def create

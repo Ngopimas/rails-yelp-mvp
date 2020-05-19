@@ -4,9 +4,8 @@ Restaurant.destroy_all
 Review.destroy_all
 
 puts 'Creating restaurants...'
-
-category = ['Chinese', 'Italian', 'Japanese', 'French', 'Belgian']
-rue = ['rue', 'avenue', 'square', 'impasse de', 'boulevard' ]
+rue = ['rue', 'avenue', 'square', 'impasse de', 'boulevard']
+category = Restaurant::CATEGORY
 
 10.times do
   Restaurant.create!(
